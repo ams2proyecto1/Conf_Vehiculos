@@ -189,4 +189,6 @@ public class Datos_Cliente {
 		);
 		frame.getContentPane().setLayout(groupLayout);
 	}
+	
+	
 }
