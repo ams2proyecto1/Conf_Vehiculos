@@ -30,10 +30,6 @@ public class leerXML {
 			Document document = documentBuilder.parse(archivo);
 			document.getDocumentElement().normalize();
 			
-			//String[] user = null;
-			//String[] pass = null;
-			
-			
 			System.out.println("Elemento raiz:" + document.getDocumentElement().getNodeName());
 			NodeList nList = document.getElementsByTagName("configuracion");
 			System.out.println("----------------------------");
@@ -73,13 +69,19 @@ public class leerXML {
 					
 					
 					String sfp = eElement.getElementsByTagName("specifications_file_path").item(0).getTextContent();
+					String v = eElement.getElementsByTagName("version").item(0).getTextContent();
+					String ev = eElement.getElementsByTagName("employee_version").item(0).getTextContent();
+					Boolean EmpV = ev.equalsIgnoreCase("true");
+					
+					
 					
 					System.out.println("car_configuration_path: " + ccp);
 					System.out.println("car_configuration_file_name: " + ccfn);
 					System.out.println("Usuarios: " + Arrays.toString(getUser()));
 					System.out.println("Contraseñas: " + Arrays.toString(getPass()));
-					System.out.println("specifications_file_path: " + sfp);
-					
+					System.out.println("Specifications_file_path: " + sfp);
+					System.out.println("Version: " + v);
+					System.out.println("Employee_version: " + EmpV);
 				}
 			}
 			
