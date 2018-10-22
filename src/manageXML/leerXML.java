@@ -33,6 +33,7 @@ public class leerXML {
 			//String[] user = null;
 			//String[] pass = null;
 			
+			
 			System.out.println("Elemento raiz:" + document.getDocumentElement().getNodeName());
 			NodeList nList = document.getElementsByTagName("configuracion");
 			System.out.println("----------------------------");

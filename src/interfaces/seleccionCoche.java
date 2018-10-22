@@ -48,6 +48,7 @@ public class seleccionCoche extends JFrame {
 		JLabel lblNewLabel = new JLabel("SELECCIONA EL MODELO DEL COCHE");
 		lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 16));
 		
+		
 		JTextArea textArea_1 = new JTextArea();
 		
 		JTextArea textArea_2 = new JTextArea();
