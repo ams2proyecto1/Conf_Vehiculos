@@ -11,6 +11,8 @@ import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
+import configuraciones.ConfigXML;
+
 /**
  *
  * @author Sean
@@ -21,7 +23,9 @@ public class leerXML {
 	private static String[] user = null;
 	private static String[] pass = null;
 	
-	public static void leer() {
+	
+	public static ConfigXML leer() {
+		ConfigXML conf1 = new ConfigXML();
 		try {
 			File archivo = new File("./ficheros/cv_config.xml");
 			
@@ -71,23 +75,20 @@ public class leerXML {
 					String sfp = eElement.getElementsByTagName("specifications_file_path").item(0).getTextContent();
 					String v = eElement.getElementsByTagName("version").item(0).getTextContent();
 					String ev = eElement.getElementsByTagName("employee_version").item(0).getTextContent();
-					Boolean EmpV = ev.equalsIgnoreCase("true");
+					Boolean empV = ev.equalsIgnoreCase("true");
+					
+					conf1 = new ConfigXML(ccp, ccfn, sfp, v, user, pass, empV);
 					
 					
 					
-					System.out.println("car_configuration_path: " + ccp);
-					System.out.println("car_configuration_file_name: " + ccfn);
-					System.out.println("Usuarios: " + Arrays.toString(getUser()));
-					System.out.println("Contraseñas: " + Arrays.toString(getPass()));
-					System.out.println("Specifications_file_path: " + sfp);
-					System.out.println("Version: " + v);
-					System.out.println("Employee_version: " + EmpV);
 				}
 			}
 			
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+		
+		return conf1;
 	}
 	
 	public static String[] getUser() {

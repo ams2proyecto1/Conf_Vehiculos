@@ -1,19 +1,24 @@
 package patrones;
 
+import configuraciones.ConfigXML;
+import manageXML.leerXML;
+
 public class ConfigurationLoader {
-	
-	private static ConfigurationLoader instance;
-	
+
+
+	private static ConfigXML instance;
+
 	private ConfigurationLoader() {
-		
-	}
-	
-	public static ConfigurationLoader getInstance() {
-		if(instance == null) {
-			instance = new ConfigurationLoader();
-		}
-		
-		return instance;
+
 	}
 
+	public static ConfigXML getInstance() {
+		if (instance == null) {
+			instance = new leerXML().leer();
+		}
+
+		return instance;
+	}
+	
+	
 }

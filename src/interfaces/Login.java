@@ -8,6 +8,7 @@ import javax.swing.GroupLayout.Alignment;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
 
+import patrones.ConfigurationLoader;
 import validaciones.ValUserPass;
 
 import javax.swing.JButton;
