@@ -8,12 +8,14 @@ import javax.swing.GroupLayout.Alignment;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
 
+import configuraciones.ConfigXML;
 import patrones.ConfigurationLoader;
 import validaciones.ValUserPass;
 
 import javax.swing.JButton;
 import javax.swing.JPasswordField;
 import java.awt.event.ActionListener;
+import java.util.Arrays;
 import java.awt.event.ActionEvent;
 
 public class Login {
@@ -23,7 +25,7 @@ public class Login {
 	private JPasswordField passwordField;
 	private String user;
 	private String pass;
-
+	private ConfigXML config;
 	public Login() {
 		initialize();
 	}
@@ -32,6 +34,7 @@ public class Login {
 	 * Initialize the contents of the frame.
 	 */
 	private void initialize() {
+		config = ConfigurationLoader.getInstance();
 		frame = new JFrame();
 		frame.setBounds(100, 100, 347, 227);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -50,7 +53,13 @@ public class Login {
 				user = tfLogin.getText();
 				pass = new String(passwordField.getPassword());
 				ValUserPass v1 = new ValUserPass();
-				v1.valUserPass(user, pass);
+				if(v1.valUserPass(user, pass, config)){
+					frame.setVisible(false);
+					Datos_Cliente d1 = new Datos_Cliente();
+					d1.obtenerUsuario(user);
+					d1.getFrame().setVisible(true);
+				}
+				
 				
 			}
 		});
@@ -87,13 +96,9 @@ public class Login {
 	public JFrame getFrame() {
 		return frame;
 	}
+	
 
-	public String getUser() {
-		return user;
-	}
 
-	public String getPass() {
-		return pass;
-	}
+
 	
 }

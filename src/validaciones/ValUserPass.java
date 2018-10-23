@@ -5,16 +5,22 @@ import java.util.Arrays;
 
 import javax.swing.JOptionPane;
 
+import configuraciones.ConfigXML;
 import interfaces.Login;
 
 public class ValUserPass {
-
-	public void valUserPass(String user, String pass) {
+	
+	
+	public boolean valUserPass(String user, String pass, ConfigXML config) {
 
 		boolean hayEspacios = validacionEspacios(user, pass);
 		if (!hayEspacios) {
-			comprobarLogin(user, pass);
+			if (comprobarLogin(user, pass, config)) {
+				return true;
+			}
+			return false;
 		}
+		return false;
 
 	}
 
@@ -36,12 +42,12 @@ public class ValUserPass {
 		return false;
 	}
 
-	private void comprobarLogin(String user, String pass) {
+	private boolean comprobarLogin(String user, String pass, ConfigXML config) {
 		boolean userExists = false;
 		boolean passSuccess = false;
 
-		String[] listUsers = { "Carlos", "Marc", "Carlos" };
-		String[] listPass = { "123", "132", "543" };
+		String[] listUsers = config.getEmployee_list();
+		String[] listPass = config.getEmployee_password();
 		ArrayList<Integer> posiciones = new ArrayList<Integer>();
 		for (int i = 0; i < listUsers.length; i++) {
 			if (user.equals(listUsers[i])) {
@@ -59,12 +65,13 @@ public class ValUserPass {
 		} else {
 			System.out.println("usuario invalido");
 		}
-		
-		if(passSuccess && userExists) {
-			System.out.println("USER SUCCESS");
-		}else if (userExists && !passSuccess) {
-			System.out.println("Contraseña invalida");
+
+		if (passSuccess && userExists) {
+			return true;
+		} else if (userExists && !passSuccess) {
+			return false;
 		}
+		return false;
 
 	}
 }

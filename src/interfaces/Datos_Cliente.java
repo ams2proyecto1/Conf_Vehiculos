@@ -28,28 +28,9 @@ public class Datos_Cliente {
 	private JTextField txtSegundoApellido;
 	private JTextField txtDireccion;
 	private JTextField txtCorreo;
-	private final Action action = new SwingAction();
+	private JLabel labelUsuario;
 	private final ButtonGroup buttonGroup = new ButtonGroup();
 
-	/**
-	 * Launch the application.
-	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					Datos_Cliente window = new Datos_Cliente();
-					window.frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
-
-	/**
-	 * Create the application.
-	 */
 	public Datos_Cliente() {
 		initialize();
 	}
@@ -61,7 +42,7 @@ public class Datos_Cliente {
 		frame = new JFrame();
 		frame.setBounds(100, 100, 530, 619);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		
+		frame.setLocationRelativeTo(null);
 		JLabel labelDatosCliente = new JLabel("New label");
 		labelDatosCliente.setFont(new Font("Tahoma", Font.BOLD, 24));
 		
@@ -118,7 +99,7 @@ public class Datos_Cliente {
 		});
 		
 		
-		JLabel labelUsuario = new JLabel("New label");
+		 labelUsuario = new JLabel("New label");
 		GroupLayout groupLayout = new GroupLayout(frame.getContentPane());
 		groupLayout.setHorizontalGroup(
 			groupLayout.createParallelGroup(Alignment.LEADING)
@@ -212,12 +193,10 @@ public class Datos_Cliente {
 	}
 	
 	
-	private class SwingAction extends AbstractAction {
-		public SwingAction() {
-			putValue(NAME, "SwingAction");
-			putValue(SHORT_DESCRIPTION, "Some short description");
-		}
-		public void actionPerformed(ActionEvent e) {
-		}
+	public JFrame getFrame() {
+		return frame;
+	}
+	public void obtenerUsuario(String usuario) {
+		labelUsuario.setText(labelUsuario.getText() +": " +  usuario);
 	}
 }
