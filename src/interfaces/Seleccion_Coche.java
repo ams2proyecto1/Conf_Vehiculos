@@ -21,7 +21,7 @@ import java.awt.event.ActionEvent;
 import javax.swing.JScrollPane;
 
 public class Seleccion_Coche extends JFrame {
-
+	JLabel usuario;
 	private JPanel contentPane;
 
 	/**
@@ -63,8 +63,8 @@ public class Seleccion_Coche extends JFrame {
 		JButton btnSiguiente = new JButton("Siguiente");
 
 		JButton btnAnterior = new JButton("Anterior");
-
-		JLabel Usuario = new JLabel("Usuario: ");
+		Login l1 = new Login();
+		usuario = new JLabel("Usuario: " );
 
 		JButton ImageSEAT1 = new JButton("");
 		ImageSEAT1.setIcon(new ImageIcon("./imagenes/seat-alhambra-min.jpg"));
@@ -163,11 +163,11 @@ public class Seleccion_Coche extends JFrame {
 										Short.MAX_VALUE)))
 						.addGroup(gl_contentPane.createSequentialGroup().addPreferredGap(ComponentPlacement.RELATED)
 								.addComponent(info, GroupLayout.PREFERRED_SIZE, 231, GroupLayout.PREFERRED_SIZE)))
-				.addGap(12).addComponent(Usuario).addGap(18)));
+				.addGap(12).addComponent(usuario).addGap(18)));
 		gl_contentPane.setVerticalGroup(gl_contentPane.createParallelGroup(Alignment.LEADING).addGroup(gl_contentPane
 				.createSequentialGroup()
 				.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE).addComponent(titulo)
-						.addComponent(Usuario))
+						.addComponent(usuario))
 				.addGap(18)
 				.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
 						.addGroup(gl_contentPane.createSequentialGroup()

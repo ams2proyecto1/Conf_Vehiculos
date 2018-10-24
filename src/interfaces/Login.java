@@ -58,6 +58,8 @@ public class Login {
 					Datos_Cliente d1 = new Datos_Cliente();
 					d1.obtenerUsuario(user);
 					d1.getFrame().setVisible(true);
+				}else {
+					
 				}
 				
 				
@@ -97,6 +99,9 @@ public class Login {
 		return frame;
 	}
 	
+	public String pasarUsuario() {
+		return this.user;
+	}
 
 
 

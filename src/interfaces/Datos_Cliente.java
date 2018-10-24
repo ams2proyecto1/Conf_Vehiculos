@@ -97,6 +97,7 @@ public class Datos_Cliente {
 				}else {
 					Seleccion_Coche sc = new Seleccion_Coche();
 					sc.setVisible(true);
+					frame.setVisible(false);
 				}
 			}
 		});
@@ -200,6 +201,7 @@ public class Datos_Cliente {
 		return frame;
 	}
 	public void obtenerUsuario(String usuario) {
+		
 		labelUsuario.setText(labelUsuario.getText() +": " +  usuario);
 	}
 }
