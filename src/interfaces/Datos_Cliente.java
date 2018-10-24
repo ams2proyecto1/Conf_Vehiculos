@@ -94,6 +94,9 @@ public class Datos_Cliente {
 				if(txtNombre.getText().equals("") || txtPrimerApellido.getText().equals("") || txtSegundoApellido.getText().equals("") || txtDireccion.getText().equals("") || txtCorreo.getText().equals("")) {
 					JOptionPane.showMessageDialog(null, "Hay campos obligatorios sin rellenar", "Error",
 							JOptionPane.ERROR_MESSAGE);
+				}else {
+					Seleccion_Coche sc = new Seleccion_Coche();
+					sc.setVisible(true);
 				}
 			}
 		});
