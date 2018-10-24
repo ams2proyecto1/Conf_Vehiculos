@@ -71,7 +71,7 @@ public class Seleccion_Coche extends JFrame {
 		ImageSEAT1.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				ImagenSelect.setIcon(new ImageIcon("./imagenes/ImgSEAT/seat-alhambra.jpg"));
+				ImagenSelect.setIcon(new ImageIcon("./imagenes/seat-alhambra.jpg"));
 				info.setText(
 						"El SEAT Alhambra es el buque insignia \nde la gama SEAT por tamaño y \ncapacidad de transporte.");
 			}
@@ -126,7 +126,7 @@ public class Seleccion_Coche extends JFrame {
 		ImageSEAT6.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				ImagenSelect.setIcon(new ImageIcon("./ImgSEAT/seat-panda.jpg"));
+				ImagenSelect.setIcon(new ImageIcon("./imagenes/seat-panda.jpg"));
 				info.setText(
 						"El SEAT Panda es un automóvil utilitario \n(segmento A) diseñado por Giorgetto \nGiugiaro y producido por esta firma bajo \nlicencia de Fiat.");
 			}
