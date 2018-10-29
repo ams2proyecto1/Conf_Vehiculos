@@ -5,17 +5,16 @@ import java.util.Arrays;
 
 import javax.swing.JOptionPane;
 
-import configuraciones.ConfigXML;
 import interfaces.Login;
 
 public class ValUserPass {
 	
 	
-	public boolean valUserPass(String user, String pass, ConfigXML config) {
+	public boolean valUserPass(String user, String pass) {
 
 		boolean hayEspacios = validacionEspacios(user, pass);
 		if (!hayEspacios) {
-			if (comprobarLogin(user, pass, config)) {
+			if (comprobarLogin(user, pass)) {
 				return true;
 			}
 			return false;
@@ -42,13 +41,14 @@ public class ValUserPass {
 		return false;
 	}
 
-	private boolean comprobarLogin(String user, String pass, ConfigXML config) {
+	private boolean comprobarLogin(String user, String pass) {
 		boolean userExists = false;
 		boolean passSuccess = false;
 
-		String[] listUsers = config.getEmployee_list();
-		String[] listPass = config.getEmployee_password();
+		String[] listUsers = {"Manolo", "Federico"}; 
+		String[] listPass =  {"123", "1234"};
 		ArrayList<Integer> posiciones = new ArrayList<Integer>();
+		
 		for (int i = 0; i < listUsers.length; i++) {
 			if (user.equals(listUsers[i])) {
 				posiciones.add(i);

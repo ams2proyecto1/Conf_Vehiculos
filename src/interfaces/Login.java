@@ -6,15 +6,16 @@ import javax.swing.JFrame;
 import javax.swing.GroupLayout;
 import javax.swing.GroupLayout.Alignment;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JTextField;
-
-import configuraciones.ConfigXML;
 import patrones.ConfigurationLoader;
 import validaciones.ValUserPass;
 
 import javax.swing.JButton;
 import javax.swing.JPasswordField;
 import java.awt.event.ActionListener;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
 import java.util.Arrays;
 import java.awt.event.ActionEvent;
 
@@ -25,7 +26,6 @@ public class Login {
 	private JPasswordField passwordField;
 	private String user;
 	private String pass;
-	private ConfigXML config;
 	public Login() {
 		initialize();
 	}
@@ -34,7 +34,6 @@ public class Login {
 	 * Initialize the contents of the frame.
 	 */
 	private void initialize() {
-		config = ConfigurationLoader.getInstance();
 		frame = new JFrame();
 		frame.setBounds(100, 100, 347, 227);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -47,27 +46,59 @@ public class Login {
 		JLabel lblNewLabel = new JLabel("New label");
 
 		JButton btnLogin = new JButton("New button");
-		
+		//		btnLogin.addActionListener(l);;
+
+
+
 		btnLogin.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				user = tfLogin.getText();
 				pass = new String(passwordField.getPassword());
 				ValUserPass v1 = new ValUserPass();
-				if(v1.valUserPass(user, pass, config)){
+				if(v1.valUserPass(user, pass)){
 					frame.setVisible(false);
 					Datos_Cliente d1 = new Datos_Cliente();
 					d1.obtenerUsuario(user);
 					d1.getFrame().setVisible(true);
 				}else {
-					
+
 				}
-				
-				
+
+
 			}
 		});
 
 
 		passwordField = new JPasswordField();
+		passwordField.addKeyListener(new KeyListener() {
+
+			@Override
+			public void keyTyped(KeyEvent e) {
+
+			}
+
+			@Override
+			public void keyReleased(KeyEvent e) {
+
+			}
+
+			@Override
+			public void keyPressed(KeyEvent e) {
+				if(e.getKeyCode()==KeyEvent.VK_ENTER){
+					user = tfLogin.getText();
+					pass = new String(passwordField.getPassword());
+					ValUserPass v1 = new ValUserPass();
+					if(v1.valUserPass(user, pass)){
+						frame.setVisible(false);
+						Datos_Cliente d1 = new Datos_Cliente();
+						d1.obtenerUsuario(user);
+						d1.getFrame().setVisible(true);
+					}else {
+						JOptionPane.showMessageDialog(null, "Error en el login", "ERROR", JOptionPane.ERROR_MESSAGE);
+					}
+				}
+			}
+		});
 		GroupLayout groupLayout = new GroupLayout(frame.getContentPane());
 		groupLayout.setHorizontalGroup(groupLayout.createParallelGroup(Alignment.LEADING).addGroup(groupLayout
 				.createSequentialGroup().addGap(32)
@@ -98,12 +129,12 @@ public class Login {
 	public JFrame getFrame() {
 		return frame;
 	}
-	
+
 	public String pasarUsuario() {
 		return this.user;
 	}
 
 
 
-	
+
 }
