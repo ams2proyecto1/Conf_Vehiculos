@@ -72,6 +72,5 @@ public class ValUserPass {
 			return false;
 		}
 		return false;
-
 	}
 }
