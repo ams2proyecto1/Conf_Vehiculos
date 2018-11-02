@@ -26,6 +26,7 @@ public class Login {
 	private JPasswordField passwordField;
 	private String user;
 	private String pass;
+
 	public Login() {
 		initialize();
 	}
@@ -46,28 +47,24 @@ public class Login {
 		JLabel lblNewLabel = new JLabel("Password:");
 
 		JButton btnLogin = new JButton("Entrar");
-		//		btnLogin.addActionListener(l);;
-
-
+		// btnLogin.addActionListener(l);;
 
 		btnLogin.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				user = tfLogin.getText();
 				pass = new String(passwordField.getPassword());
 				ValUserPass v1 = new ValUserPass();
-				if(v1.valUserPass(user, pass)){
+				if (v1.valUserPass(user, pass)) {
 					frame.setVisible(false);
 					Datos_Cliente d1 = new Datos_Cliente();
 					d1.obtenerUsuario(user);
 					d1.getFrame().setVisible(true);
-				}else {
+				} else {
 
 				}
 
-
 			}
 		});
-
 
 		passwordField = new JPasswordField();
 		passwordField.addKeyListener(new KeyListener() {
@@ -75,7 +72,6 @@ public class Login {
 			@Override
 			public void keyTyped(KeyEvent e) {
 
-				
 			}
 
 			@Override
@@ -85,16 +81,18 @@ public class Login {
 
 			@Override
 			public void keyPressed(KeyEvent e) {
-				if(e.getKeyCode()==KeyEvent.VK_ENTER){
+
+				if (e.getKeyCode() == KeyEvent.VK_ENTER) {
+
 					user = tfLogin.getText();
 					pass = new String(passwordField.getPassword());
 					ValUserPass v1 = new ValUserPass();
-					if(v1.valUserPass(user, pass)){
+					if (v1.valUserPass(user, pass)) {
 						frame.setVisible(false);
 						Datos_Cliente d1 = new Datos_Cliente();
 						d1.obtenerUsuario(user);
 						d1.getFrame().setVisible(true);
-					}else {
+					} else {
 						JOptionPane.showMessageDialog(null, "Error en el login", "ERROR", JOptionPane.ERROR_MESSAGE);
 					}
 				}
@@ -134,8 +132,5 @@ public class Login {
 	public String pasarUsuario() {
 		return this.user;
 	}
-
-
-
 
 }

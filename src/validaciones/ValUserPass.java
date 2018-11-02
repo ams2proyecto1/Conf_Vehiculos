@@ -6,6 +6,7 @@ import java.util.Arrays;
 import javax.swing.JOptionPane;
 
 import interfaces.Login;
+import patrones.ConfigurationLoader;
 
 public class ValUserPass {
 	
@@ -44,9 +45,9 @@ public class ValUserPass {
 	private boolean comprobarLogin(String user, String pass) {
 		boolean userExists = false;
 		boolean passSuccess = false;
-
-		String[] listUsers = {"Manolo", "Federico"}; 
-		String[] listPass =  {"123", "1234"};
+		ConfigurationLoader config =ConfigurationLoader.getConfig();
+		String[] listUsers = config.getEmployee_list();
+		String[] listPass =  config.getEmployee_password();
 		ArrayList<Integer> posiciones = new ArrayList<Integer>();
 		
 		for (int i = 0; i < listUsers.length; i++) {

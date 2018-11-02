@@ -40,7 +40,7 @@ public class Datos_Cliente {
 	 */
 	private void initialize() {
 		frame = new JFrame();
-		frame.setBounds(100, 100, 530, 619);
+		frame.setBounds(100, 100, 597, 619);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setLocationRelativeTo(null);
 		JLabel labelDatosCliente = new JLabel("DATOS DEL CLIENTE");
@@ -103,15 +103,14 @@ public class Datos_Cliente {
 		});
 		
 		
-		 labelUsuario = new JLabel("New label");
+		 labelUsuario = new JLabel("Usuario:");
 		GroupLayout groupLayout = new GroupLayout(frame.getContentPane());
 		groupLayout.setHorizontalGroup(
-			groupLayout.createParallelGroup(Alignment.LEADING)
+			groupLayout.createParallelGroup(Alignment.TRAILING)
 				.addGroup(groupLayout.createSequentialGroup()
 					.addGap(40)
 					.addGroup(groupLayout.createParallelGroup(Alignment.LEADING)
-						.addComponent(botonGuardar, GroupLayout.PREFERRED_SIZE, 161, GroupLayout.PREFERRED_SIZE)
-						.addGroup(groupLayout.createSequentialGroup()
+						.addGroup(Alignment.TRAILING, groupLayout.createSequentialGroup()
 							.addGroup(groupLayout.createParallelGroup(Alignment.LEADING)
 								.addComponent(labelNombre)
 								.addComponent(labelPrimerApellido)
@@ -130,7 +129,6 @@ public class Datos_Cliente {
 										.addComponent(txtDireccion)
 										.addComponent(txtCorreo)
 										.addComponent(txtNombre, Alignment.LEADING, GroupLayout.DEFAULT_SIZE, 315, Short.MAX_VALUE)))
-								.addComponent(botonSiguiente, GroupLayout.PREFERRED_SIZE, 160, GroupLayout.PREFERRED_SIZE)
 								.addGroup(groupLayout.createSequentialGroup()
 									.addGap(18)
 									.addGroup(groupLayout.createParallelGroup(Alignment.LEADING, false)
@@ -140,12 +138,17 @@ public class Datos_Cliente {
 											.addPreferredGap(ComponentPlacement.RELATED)
 											.addComponent(rbMujer)
 											.addPreferredGap(ComponentPlacement.RELATED)
-											.addComponent(rbNoDeterminado)))))))
-					.addContainerGap(40, Short.MAX_VALUE))
-				.addGroup(Alignment.TRAILING, groupLayout.createSequentialGroup()
+											.addComponent(rbNoDeterminado)))))
+							.addContainerGap(GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+						.addGroup(groupLayout.createSequentialGroup()
+							.addComponent(botonGuardar, GroupLayout.PREFERRED_SIZE, 161, GroupLayout.PREFERRED_SIZE)
+							.addPreferredGap(ComponentPlacement.RELATED, 143, Short.MAX_VALUE)
+							.addComponent(botonSiguiente, GroupLayout.PREFERRED_SIZE, 160, GroupLayout.PREFERRED_SIZE)
+							.addGap(25))))
+				.addGroup(groupLayout.createSequentialGroup()
 					.addGap(91)
 					.addComponent(labelDatosCliente)
-					.addPreferredGap(ComponentPlacement.RELATED, 31, Short.MAX_VALUE)
+					.addPreferredGap(ComponentPlacement.RELATED, 56, Short.MAX_VALUE)
 					.addComponent(labelUsuario)
 					.addGap(97))
 		);
@@ -187,9 +190,9 @@ public class Datos_Cliente {
 						.addComponent(labelFecha)
 						.addComponent(dcFechaNacimiento, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
 					.addGap(33)
-					.addGroup(groupLayout.createParallelGroup(Alignment.LEADING)
-						.addComponent(botonSiguiente, GroupLayout.DEFAULT_SIZE, 43, Short.MAX_VALUE)
-						.addComponent(botonGuardar, GroupLayout.DEFAULT_SIZE, 43, Short.MAX_VALUE))
+					.addGroup(groupLayout.createParallelGroup(Alignment.BASELINE)
+						.addComponent(botonGuardar, GroupLayout.DEFAULT_SIZE, 43, Short.MAX_VALUE)
+						.addComponent(botonSiguiente, GroupLayout.DEFAULT_SIZE, 43, Short.MAX_VALUE))
 					.addGap(36))
 		);
 		frame.getContentPane().setLayout(groupLayout);
