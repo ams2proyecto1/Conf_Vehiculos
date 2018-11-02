@@ -43,21 +43,21 @@ public class Datos_Cliente {
 		frame.setBounds(100, 100, 530, 619);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setLocationRelativeTo(null);
-		JLabel labelDatosCliente = new JLabel("New label");
+		JLabel labelDatosCliente = new JLabel("DATOS DEL CLIENTE");
 		labelDatosCliente.setFont(new Font("Tahoma", Font.BOLD, 24));
 		
-		JLabel labelNombre = new JLabel("New label");
+		JLabel labelNombre = new JLabel("Nombre *");
 		
 		txtNombre = new JTextField();
 		txtNombre.setColumns(10);
 		
-		JLabel labelPrimerApellido = new JLabel("New label");
+		JLabel labelPrimerApellido = new JLabel("Primer Apellido *");
 		
-		JLabel labelSegundoApellido = new JLabel("New label");
+		JLabel labelSegundoApellido = new JLabel("Segundo Apellido *");
 		
-		JLabel labelDireccion = new JLabel("New label");
+		JLabel labelDireccion = new JLabel("Direccion *");
 		
-		JLabel labelCorreo = new JLabel("New label");
+		JLabel labelCorreo = new JLabel("Correo Electronico *");
 		
 		txtPrimerApellido = new JTextField();
 		txtPrimerApellido.setColumns(10);
@@ -71,24 +71,24 @@ public class Datos_Cliente {
 		txtCorreo = new JTextField();
 		txtCorreo.setColumns(10);
 		
-		JLabel labelGenero = new JLabel("New label");
+		JLabel labelGenero = new JLabel("Genero");
 		
-		JRadioButton rbHombre = new JRadioButton("New radio button");
+		JRadioButton rbHombre = new JRadioButton("Hombre");
 		buttonGroup.add(rbHombre);
 		
-		JRadioButton rbMujer = new JRadioButton("New radio button");
+		JRadioButton rbMujer = new JRadioButton("Mujer");
 		buttonGroup.add(rbMujer);
 		
-		JRadioButton rbNoDeterminado = new JRadioButton("New radio button");
+		JRadioButton rbNoDeterminado = new JRadioButton("No determinado");
 		buttonGroup.add(rbNoDeterminado);
 		
-		JLabel labelFecha = new JLabel("New label");
+		JLabel labelFecha = new JLabel("Fecha Nacimiento");
 		
 		JDateChooser dcFechaNacimiento = new JDateChooser();
 		
-		JButton botonGuardar = new JButton("New button");
+		JButton botonGuardar = new JButton("Guardar");
 		
-		JButton botonSiguiente = new JButton("New button");
+		JButton botonSiguiente = new JButton("Siguiente");
 		botonSiguiente.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				if(txtNombre.getText().equals("") || txtPrimerApellido.getText().equals("") || txtSegundoApellido.getText().equals("") || txtDireccion.getText().equals("") || txtCorreo.getText().equals("")) {
@@ -130,23 +130,22 @@ public class Datos_Cliente {
 										.addComponent(txtDireccion)
 										.addComponent(txtCorreo)
 										.addComponent(txtNombre, Alignment.LEADING, GroupLayout.DEFAULT_SIZE, 315, Short.MAX_VALUE)))
-								.addGroup(groupLayout.createParallelGroup(Alignment.TRAILING)
-									.addComponent(botonSiguiente, GroupLayout.PREFERRED_SIZE, 160, GroupLayout.PREFERRED_SIZE)
-									.addGroup(Alignment.LEADING, groupLayout.createSequentialGroup()
-										.addGap(18)
-										.addGroup(groupLayout.createParallelGroup(Alignment.TRAILING, false)
-											.addComponent(dcFechaNacimiento, Alignment.LEADING, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-											.addGroup(Alignment.LEADING, groupLayout.createSequentialGroup()
-												.addComponent(rbHombre)
-												.addPreferredGap(ComponentPlacement.RELATED)
-												.addComponent(rbMujer)
-												.addPreferredGap(ComponentPlacement.RELATED)
-												.addComponent(rbNoDeterminado))))))))
+								.addComponent(botonSiguiente, GroupLayout.PREFERRED_SIZE, 160, GroupLayout.PREFERRED_SIZE)
+								.addGroup(groupLayout.createSequentialGroup()
+									.addGap(18)
+									.addGroup(groupLayout.createParallelGroup(Alignment.LEADING, false)
+										.addComponent(dcFechaNacimiento, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+										.addGroup(groupLayout.createSequentialGroup()
+											.addComponent(rbHombre)
+											.addPreferredGap(ComponentPlacement.RELATED)
+											.addComponent(rbMujer)
+											.addPreferredGap(ComponentPlacement.RELATED)
+											.addComponent(rbNoDeterminado)))))))
 					.addContainerGap(40, Short.MAX_VALUE))
-				.addGroup(groupLayout.createSequentialGroup()
+				.addGroup(Alignment.TRAILING, groupLayout.createSequentialGroup()
 					.addGap(91)
-					.addComponent(labelDatosCliente, GroupLayout.PREFERRED_SIZE, 164, GroupLayout.PREFERRED_SIZE)
-					.addPreferredGap(ComponentPlacement.RELATED, 116, Short.MAX_VALUE)
+					.addComponent(labelDatosCliente)
+					.addPreferredGap(ComponentPlacement.RELATED, 31, Short.MAX_VALUE)
 					.addComponent(labelUsuario)
 					.addGap(97))
 		);
@@ -189,8 +188,8 @@ public class Datos_Cliente {
 						.addComponent(dcFechaNacimiento, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
 					.addGap(33)
 					.addGroup(groupLayout.createParallelGroup(Alignment.LEADING)
-						.addComponent(botonSiguiente, GroupLayout.DEFAULT_SIZE, 41, Short.MAX_VALUE)
-						.addComponent(botonGuardar, GroupLayout.DEFAULT_SIZE, 41, Short.MAX_VALUE))
+						.addComponent(botonSiguiente, GroupLayout.DEFAULT_SIZE, 43, Short.MAX_VALUE)
+						.addComponent(botonGuardar, GroupLayout.DEFAULT_SIZE, 43, Short.MAX_VALUE))
 					.addGap(36))
 		);
 		frame.getContentPane().setLayout(groupLayout);

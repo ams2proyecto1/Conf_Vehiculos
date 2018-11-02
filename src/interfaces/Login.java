@@ -38,14 +38,14 @@ public class Login {
 		frame.setBounds(100, 100, 347, 227);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-		JLabel lblLogin = new JLabel("New Label");
+		JLabel lblLogin = new JLabel("Login:");
 		frame.setLocationRelativeTo(null);
 		tfLogin = new JTextField();
 		tfLogin.setColumns(10);
 
-		JLabel lblNewLabel = new JLabel("New label");
+		JLabel lblNewLabel = new JLabel("Password:");
 
-		JButton btnLogin = new JButton("New button");
+		JButton btnLogin = new JButton("Entrar");
 		//		btnLogin.addActionListener(l);;
 
 
