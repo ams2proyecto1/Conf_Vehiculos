@@ -173,4 +173,145 @@
 		</accesory>
 	</accesories>
 
+	
+	<submodel>
+		<id>0001</id>
+		<sid>0001</sid>
+		<name>SEAT Alhambra 1.4</name>
+		<caballos>150CV</caballos>
+		<doors>5 puertas</doors>
+		<motor>MotorDiesel</motor>
+		<price>25484€</price>
+	</submodel>
+	
+	<submodel>
+		<id>0001</id>
+		<sid>0002</sid>
+		<name>SEAT Alhambra 2.0</name>
+		<caballos>160CV</caballos>
+		<doors>5 puertas</doors>
+		<motor>MotorElectrico</motor>
+		<price>26484€</price>
+	</submodel>
+	
+	<submodel>
+		<id>0002</id>
+		<sid>0003</sid>
+		<name>SEAT Arena 1.1</name>
+		<caballos>140CV</caballos>
+		<doors>5 puertas</doors>
+		<motor>MotorDiesel</motor>
+		<price>23784€</price>
+	</submodel>
+	
+	<submodel>
+		<id>0002</id>
+		<sid>0004</sid>
+		<name>SEAT Arena 1.9</name>
+		<caballos>170CV</caballos>
+		<doors>5 puertas</doors>
+		<motor>MotorDiesel</motor>		
+		<price>25456€</price>
+	</submodel>
+	
+	<submodel>
+		<id>0003</id>
+		<sid>0005</sid>
+		<name>SEAT Ateca 2.0</name>
+		<caballos>170CV</caballos>
+		<doors>5 puertas</doors>
+		<motor>MotorElectrico</motor>
+		<price>28357€</price>
+	</submodel>
+	
+	<submodel>
+		<id>0003</id>
+		<sid>0006</sid>
+		<name>SEAT Ateca 3.0</name>
+		<caballos>190CV</caballos>
+		<doors>5 puertas</doors>
+		<motor>MotorElectrico</motor>
+		<price>30784€</price>
+	</submodel>
+	
+	<submodel>
+		<id>0004</id>
+		<sid>0007</sid>
+		<name>SEAT Ibiza 4.0</name>
+		<caballos>160CV</caballos>
+		<doors>5 puertas</doors>
+		<motor>MotorElectrico</motor>
+		<price>20484€</price>
+	</submodel>
+	
+	<submodel>
+		<id>0004</id>
+		<sid>0008</sid>
+		<name>SEAT Ibiza 5.0</name>
+		<caballos>140CV</caballos>
+		<doors>5 puertas</doors>
+		<motor>MotorDiesel</motor>
+		<price>24894€</price>
+	</submodel>
+	
+	<submodel>
+		<id>0005</id>
+		<sid>0009</sid>
+		<name>SEAT Leon 5.1</name>
+		<caballos>140CV</caballos>
+		<doors>5 puertas</doors>
+		<motor>MotorDiesel</motor>
+		<price>15084€</price>
+	</submodel>
+	
+	<submodel>
+		<id>0005</id>
+		<sid>0010</sid>
+		<name>SEAT Leon 6.1</name>
+		<caballos>180CV</caballos>
+		<doors>5 puertas</doors>
+		<motor>MotorElectrico</motor>
+		<price>30484€</price>
+	</submodel>
+	
+	<submodel>
+		<id>0006</id>
+		<sid>0011</sid>
+		<name>SEAT Panda 0.5</name>
+		<caballos>90CV</caballos>
+		<doors>3 puertas</doors>
+		<motor>MotorDiesel</motor>
+		<price>1484€</price>
+	</submodel>
+	
+	<submodel>
+		<id>0006</id>
+		<sid>0012</sid>
+		<name>SEAT Panda 0.9</name>
+		<caballos>100CV</caballos>
+		<doors>3 puertas</doors>
+		<motor>MotorDiesel</motor>
+		<price>3248</price>
+	</submodel>
+	
+	<submodel>
+		<id>0007</id>
+		<sid>0013</sid>
+		<name>SEAT Tarraco 2.1</name>
+		<caballos>170CV</caballos>
+		<doors>5 puertas</doors>
+		<motor>MotorDiesel</motor>
+		<price>15484€</price>
+	</submodel>
+	
+	<submodel>
+		<id>0007</id>
+		<sid>0014</sid>
+		<name>SEAT Tarraco 3.5</name>
+		<caballos>180CV</caballos>
+		<doors>5 puertas</doors>
+		<motor>MotorDiesel</motor>
+		<price>16484€</price>
+	</submodel>
+	
 </xml_cars_config>
