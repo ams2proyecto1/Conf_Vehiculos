@@ -26,9 +26,15 @@ import javax.swing.ButtonGroup;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
+import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -44,7 +50,7 @@ public class Datos_Cliente {
 	private JRadioButton rbMujer;
 	private JRadioButton rbHombre;
 	private JRadioButton rbNoDeterminado;
-	private JDateChooser  dcFechaNacimiento;
+	private JDateChooser dcFechaNacimiento;
 	private final ButtonGroup buttonGroup = new ButtonGroup();
 
 	public Datos_Cliente() {
@@ -93,7 +99,7 @@ public class Datos_Cliente {
 		rbHombre = new JRadioButton("Hombre");
 		buttonGroup.add(rbHombre);
 
-		 rbMujer = new JRadioButton("Mujer");
+		rbMujer = new JRadioButton("Mujer");
 		buttonGroup.add(rbMujer);
 
 		rbNoDeterminado = new JRadioButton("No determinado");
@@ -120,8 +126,9 @@ public class Datos_Cliente {
 				} else if (!txtCorreo.getText().equals("") && (mather.find() == false)) {
 					JOptionPane.showMessageDialog(null, "El campo Correo esta mal escrito", "Error",
 							JOptionPane.ERROR_MESSAGE);
-				}else {
-					JOptionPane.showMessageDialog(null, "Se han guardado todos los datos", "Bieen", JOptionPane.INFORMATION_MESSAGE);
+				} else {
+					JOptionPane.showMessageDialog(null, "Se han guardado todos los datos", "Bieen",
+							JOptionPane.INFORMATION_MESSAGE);
 				}
 			}
 		});
@@ -161,6 +168,7 @@ public class Datos_Cliente {
 							JOptionPane.ERROR_MESSAGE);
 				} else {
 					Seleccion_Coche sc = new Seleccion_Coche();
+					guardarDatos();
 					sc.setVisible(true);
 					frame.setVisible(false);
 				}
@@ -251,6 +259,36 @@ public class Datos_Cliente {
 														Short.MAX_VALUE))
 										.addGap(36)));
 		frame.getContentPane().setLayout(groupLayout);
+		File f = new File("./ficheros/datosCliente.txt");
+		if (f.exists()) {
+			try {
+				String cadena;
+				FileReader fr = new FileReader(f);
+				BufferedReader br = new BufferedReader(fr);
+				cadena = br.readLine();
+				String[] datos = cadena.split(",");
+				txtNombre.setText(datos[0]);
+				txtPrimerApellido.setText(datos[1]);
+				txtSegundoApellido.setText(datos[2]);
+				txtDireccion.setText(datos[3]);
+				txtCorreo.setText(datos[4]);
+
+				if (datos[5].equals("No determinado")) {
+					rbNoDeterminado.setSelected(true);
+				} else if (datos[5].equals("Mujer")) {
+					rbMujer.setSelected(true);
+				} else {
+					rbHombre.setSelected(true);
+				}
+				
+
+				br.close();
+			} catch (IOException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
+		}
+
 	}
 
 	public JFrame getFrame() {
@@ -265,7 +303,9 @@ public class Datos_Cliente {
 	public void guardarDatos() {
 		try {
 			FileWriter fw = new FileWriter(new File("./ficheros/datosCliente.txt"));
-			Cliente c1 = new Cliente(txtNombre.getText(),txtPrimerApellido.getText(),txtSegundoApellido.getText(),txtDireccion.getText(),txtCorreo.getText(),genero(rbHombre,rbMujer,rbNoDeterminado),dcFechaNacimiento.getDate());
+			Cliente c1 = new Cliente(txtNombre.getText(), txtPrimerApellido.getText(), txtSegundoApellido.getText(),
+					txtDireccion.getText(), txtCorreo.getText(), genero(rbHombre, rbMujer, rbNoDeterminado),
+					dcFechaNacimiento.getDate());
 			fw.write(c1.toString());
 			fw.close();
 		} catch (IOException e) {

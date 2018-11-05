@@ -17,6 +17,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
+import java.io.File;
 import java.util.Arrays;
 import java.awt.event.ActionEvent;
 
@@ -36,6 +37,11 @@ public class Login {
 	 * Initialize the contents of the frame.
 	 */
 	private void initialize() {
+		File f = new File("./ficheros/datosCliente.txt");
+		System.out.println(f.exists());
+
+			
+		
 		frame = new JFrame();
 		frame.setBounds(100, 100, 347, 227);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
