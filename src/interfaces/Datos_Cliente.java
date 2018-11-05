@@ -19,6 +19,8 @@ import java.awt.event.ActionEvent;
 import javax.swing.Action;
 import javax.swing.ButtonGroup;
 import java.awt.event.ActionListener;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class Datos_Cliente {
 
@@ -91,9 +93,16 @@ public class Datos_Cliente {
 		JButton botonSiguiente = new JButton("Siguiente");
 		botonSiguiente.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
+				Pattern pattern = Pattern.compile("^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@"
+						+ "[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$");
+				String email = txtCorreo.getText();
+				Matcher mather = pattern.matcher(email);
 				if(txtNombre.getText().equals("") || txtPrimerApellido.getText().equals("") || txtSegundoApellido.getText().equals("") || txtDireccion.getText().equals("") || txtCorreo.getText().equals("")) {
 					JOptionPane.showMessageDialog(null, "Hay campos obligatorios sin rellenar", "Error",
 							JOptionPane.ERROR_MESSAGE);
+				}else if(!txtCorreo.getText().equals("") && (mather.find() == false)){
+						JOptionPane.showMessageDialog(null, "El campo Correo esta mal escrito", "Error",
+								JOptionPane.ERROR_MESSAGE);
 				}else {
 					Seleccion_Coche sc = new Seleccion_Coche();
 					sc.setVisible(true);
