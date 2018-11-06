@@ -181,7 +181,12 @@
 		<caballos>150CV</caballos>
 		<doors>5 puertas</doors>
 		<motor>MotorDiesel</motor>
-		<price>25484€</price>
+		<price>25484</price>
+		<lista_accesorios>
+			<accesory>2001</accesory>
+			<accesory>2004</accesory>
+			<accesory>2005</accesory>
+		</lista_accesorios>
 	</submodel>
 	
 	<submodel>
@@ -191,7 +196,13 @@
 		<caballos>160CV</caballos>
 		<doors>5 puertas</doors>
 		<motor>MotorElectrico</motor>
-		<price>26484€</price>
+		<price>26484</price>
+		<lista_accesorios>
+			<accesory>2001</accesory>
+			<accesory>2002</accesory>
+			<accesory>2005</accesory>
+			<accesory>2006</accesory>
+		</lista_accesorios>
 	</submodel>
 	
 	<submodel>
@@ -201,7 +212,12 @@
 		<caballos>140CV</caballos>
 		<doors>5 puertas</doors>
 		<motor>MotorDiesel</motor>
-		<price>23784€</price>
+		<price>23784</price>
+		<lista_accesorios>
+			<accesory>2002</accesory>
+			<accesory>2004</accesory>
+			<accesory>2006</accesory>
+		</lista_accesorios>
 	</submodel>
 	
 	<submodel>
@@ -211,7 +227,13 @@
 		<caballos>170CV</caballos>
 		<doors>5 puertas</doors>
 		<motor>MotorDiesel</motor>		
-		<price>25456€</price>
+		<price>25456</price>
+		<lista_accesorios>
+			<accesory>2002</accesory>
+			<accesory>2004</accesory>
+			<accesory>2005</accesory>
+			<accesory>2006</accesory>
+		</lista_accesorios>
 	</submodel>
 	
 	<submodel>
@@ -221,7 +243,12 @@
 		<caballos>170CV</caballos>
 		<doors>5 puertas</doors>
 		<motor>MotorElectrico</motor>
-		<price>28357€</price>
+		<price>28357</price>
+		<lista_accesorios>
+			<accesory>2001</accesory>
+			<accesory>2005</accesory>
+			<accesory>2006</accesory>
+		</lista_accesorios>
 	</submodel>
 	
 	<submodel>
@@ -231,7 +258,14 @@
 		<caballos>190CV</caballos>
 		<doors>5 puertas</doors>
 		<motor>MotorElectrico</motor>
-		<price>30784€</price>
+		<price>30784</price>
+		<lista_accesorios>
+			<accesory>2001</accesory>
+			<accesory>2003</accesory>
+			<accesory>2004</accesory>
+			<accesory>2005</accesory>
+			<accesory>2006</accesory>
+		</lista_accesorios>
 	</submodel>
 	
 	<submodel>
@@ -241,7 +275,12 @@
 		<caballos>160CV</caballos>
 		<doors>5 puertas</doors>
 		<motor>MotorElectrico</motor>
-		<price>20484€</price>
+		<price>20484</price>
+		<lista_accesorios>
+			<accesory>2001</accesory>
+			<accesory>2005</accesory>
+			<accesory>2006</accesory>
+		</lista_accesorios>
 	</submodel>
 	
 	<submodel>
@@ -251,7 +290,14 @@
 		<caballos>140CV</caballos>
 		<doors>5 puertas</doors>
 		<motor>MotorDiesel</motor>
-		<price>24894€</price>
+		<price>24894</price>
+		<lista_accesorios>
+			<accesory>2001</accesory>
+			<accesory>2003</accesory>
+			<accesory>2004</accesory>
+			<accesory>2005</accesory>
+			<accesory>2006</accesory>
+		</lista_accesorios>
 	</submodel>
 	
 	<submodel>
@@ -261,7 +307,11 @@
 		<caballos>140CV</caballos>
 		<doors>5 puertas</doors>
 		<motor>MotorDiesel</motor>
-		<price>15084€</price>
+		<price>15084</price>
+		<lista_accesorios>
+			<accesory>2005</accesory>
+			<accesory>2006</accesory>
+		</lista_accesorios>
 	</submodel>
 	
 	<submodel>
@@ -271,7 +321,14 @@
 		<caballos>180CV</caballos>
 		<doors>5 puertas</doors>
 		<motor>MotorElectrico</motor>
-		<price>30484€</price>
+		<price>30484</price>
+		<lista_accesorios>
+			<accesory>2001</accesory>
+			<accesory>2002</accesory>
+			<accesory>2003</accesory>
+			<accesory>2005</accesory>
+			<accesory>2006</accesory>
+		</lista_accesorios>
 	</submodel>
 	
 	<submodel>
@@ -281,7 +338,12 @@
 		<caballos>90CV</caballos>
 		<doors>3 puertas</doors>
 		<motor>MotorDiesel</motor>
-		<price>1484€</price>
+		<price>1484</price>
+		<lista_accesorios>
+			<accesory>2002</accesory>
+			<accesory>2005</accesory>
+			<accesory>2006</accesory>
+		</lista_accesorios>
 	</submodel>
 	
 	<submodel>
@@ -292,6 +354,12 @@
 		<doors>3 puertas</doors>
 		<motor>MotorDiesel</motor>
 		<price>3248</price>
+		<lista_accesorios>
+			<accesory>2002</accesory>
+			<accesory>2003</accesory>
+			<accesory>2005</accesory>
+			<accesory>2006</accesory>
+		</lista_accesorios>
 	</submodel>
 	
 	<submodel>
@@ -301,7 +369,12 @@
 		<caballos>170CV</caballos>
 		<doors>5 puertas</doors>
 		<motor>MotorDiesel</motor>
-		<price>15484€</price>
+		<price>15484</price>
+		<lista_accesorios>
+			<accesory>2001</accesory>
+			<accesory>2005</accesory>
+			<accesory>2006</accesory>
+		</lista_accesorios>
 	</submodel>
 	
 	<submodel>
@@ -311,7 +384,14 @@
 		<caballos>180CV</caballos>
 		<doors>5 puertas</doors>
 		<motor>MotorDiesel</motor>
-		<price>16484€</price>
+		<price>16484</price>
+		<lista_accesorios>
+			<accesory>2001</accesory>
+			<accesory>2003</accesory>
+			<accesory>2004</accesory>
+			<accesory>2005</accesory>
+			<accesory>2006</accesory>
+		</lista_accesorios>
 	</submodel>
 	
 </xml_cars_config>

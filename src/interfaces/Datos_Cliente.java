@@ -52,6 +52,7 @@ public class Datos_Cliente {
 	private JRadioButton rbNoDeterminado;
 	private JDateChooser dcFechaNacimiento;
 	private final ButtonGroup buttonGroup = new ButtonGroup();
+	private JCalendar calendar;
 
 	public Datos_Cliente() {
 		initialize();
@@ -108,6 +109,12 @@ public class Datos_Cliente {
 		JLabel labelFecha = new JLabel("Fecha Nacimiento");
 
 		dcFechaNacimiento = new JDateChooser();
+		dcFechaNacimiento.getCalendarButton().addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				calendar = new JCalendar();
+				frame.add(calendar);
+			}
+		});
 
 		JButton botonGuardar = new JButton("Guardar");
 		// 27. Hacer las mismas comprobacionesque se hace con el boton siguiente con el
