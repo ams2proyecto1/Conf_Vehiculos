@@ -38,7 +38,10 @@ public class Login {
 	 */
 	private void initialize() {
 		File f = new File("./ficheros/datosCliente.txt");
-		System.out.println(f.exists());
+		if(f.exists()) {
+			f.delete();
+		}
+		
 
 			
 		
