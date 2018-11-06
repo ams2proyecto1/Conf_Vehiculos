@@ -138,14 +138,12 @@ public class Leer_XML_Cars  implements ICoches{
 				
 				for (int u = 0; u < nList4.getLength(); u++) {
 
-					org.w3c.dom.Node nNode4 =nList4.item(u);
-							
+					org.w3c.dom.Node nNode4 =nList4.item(u);	
 					
 							
 					if (nNode4.getNodeType() == Node.ELEMENT_NODE) {
 
 						Node eElement4 = nNode4;
-
 						
 						sm_id = ((Element) eElement4).getElementsByTagName("id").item(0).getTextContent();
 						sm_sid = ((Element) eElement4).getElementsByTagName("sid").item(0).getTextContent();

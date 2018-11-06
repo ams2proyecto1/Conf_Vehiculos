@@ -95,7 +95,5 @@ public class Submodel {
 				+ ", motor=" + motor + ", price=" + price + ", lista_accesorios=" + Arrays.toString(lista_accesorios)
 				+ "]";
 	}
-	
-	
 
 }

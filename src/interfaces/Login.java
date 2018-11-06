@@ -40,10 +40,7 @@ public class Login {
 		File f = new File("./ficheros/datosCliente.txt");
 		if(f.exists()) {
 			f.delete();
-		}
-		
-
-			
+		}	
 		
 		frame = new JFrame();
 		frame.setBounds(100, 100, 347, 227);
