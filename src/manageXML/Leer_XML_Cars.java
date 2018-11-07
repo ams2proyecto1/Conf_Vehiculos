@@ -33,10 +33,13 @@ public class Leer_XML_Cars  implements ICoches{
 	private static ArrayList<Engine> engines;
 	private static ArrayList<Accesory> accesories;
 	
-	
+	public static void main(String[] args) {
+		Leer_XML_Cars cars = new Leer_XML_Cars();
+		
+	}
 	
 	public Leer_XML_Cars() {
-		File f = new File("cars_config.xml");
+		File f = new File("./ficheros/cars_config.xml");
 		DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
 		models = new ArrayList<Model>();
 		engines = new ArrayList<Engine>();
@@ -47,7 +50,7 @@ public class Leer_XML_Cars  implements ICoches{
 		
 		Document doc = builder.parse(f);
 		
-		NodeList nList = ((Document) doc).getElementsByTagName("models");
+		NodeList nList = ((Document) doc).getElementsByTagName("model");
 		
 		for (int i = 0; i < nList.getLength(); i++) {
 
@@ -75,7 +78,7 @@ public class Leer_XML_Cars  implements ICoches{
 		}
 		
 		
-		NodeList nList2 = ((Document) doc).getElementsByTagName("engines");
+		NodeList nList2 = ((Document) doc).getElementsByTagName("engine");
 		
 		for (int j = 0; j < nList2.getLength(); j++) {
 
@@ -100,7 +103,7 @@ public class Leer_XML_Cars  implements ICoches{
 			}
 		}
 		
-				NodeList nList3 = ((Document) doc).getElementsByTagName("accesories");
+				NodeList nList3 = ((Document) doc).getElementsByTagName("accesory");
 				
 				for (int k = 0; k < nList3.getLength(); k++) {
 
