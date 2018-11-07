@@ -1,6 +1,5 @@
 package interfaces;
 
-import java.awt.EventQueue;
 
 import javax.swing.JFrame;
 import javax.swing.GroupLayout;
@@ -266,7 +265,7 @@ public class Datos_Cliente {
 														Short.MAX_VALUE))
 										.addGap(36)));
 		frame.getContentPane().setLayout(groupLayout);
-		File f = new File("./ficheros/datosCliente.txt");
+		File f = new File("./temp/ficheros/datosCliente.txt");
 		if (f.exists()) {
 			try {
 				String cadena;
@@ -287,7 +286,6 @@ public class Datos_Cliente {
 				} else {
 					rbHombre.setSelected(true);
 				}
-				
 
 				br.close();
 			} catch (IOException e1) {

@@ -6,6 +6,10 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+
+import manageXML.Leer_XML_Cars;
+import objetos.Model;
+
 import java.awt.GridLayout;
 import javax.swing.JLabel;
 import java.awt.Font;
@@ -63,9 +67,19 @@ public class Seleccion_Coche extends JFrame {
 			JTextArea info = new JTextArea();
 			info.setText(
 					"El SEAT Alhambra es el buque insignia \nde la gama SEAT por tamaño y \ncapacidad de transporte.");
+			info.setLineWrap(true);
 
 			JButton btnSiguiente = new JButton("Siguiente");
-
+			btnSiguiente.addActionListener(new ActionListener() {
+				
+				@Override
+				public void actionPerformed(ActionEvent e) {
+					Compra_Accesorios ca = new Compra_Accesorios();
+					ca.setVisible(true);
+					dispose();
+					
+				}
+			});
 			JButton btnAnterior = new JButton("Anterior");
 			btnAnterior.addActionListener(new ActionListener() {
 
@@ -77,7 +91,9 @@ public class Seleccion_Coche extends JFrame {
 					datos.getFrame().setVisible(true);
 				}
 			});
-
+			Leer_XML_Cars cars = new Leer_XML_Cars();
+			ArrayList<Model> modelos = cars.getModelAll();
+			
 			usuario = new JLabel("Usuario: ");
 
 			JButton ImageSEAT1 = new JButton("");
@@ -85,9 +101,10 @@ public class Seleccion_Coche extends JFrame {
 			ImageSEAT1.addActionListener(new ActionListener() {
 				@Override
 				public void actionPerformed(ActionEvent e) {
-					ImagenSelect.setIcon(new ImageIcon("./imagenes/seat-alhambra.jpg"));
+					ImagenSelect.setIcon(new ImageIcon("./imagenes/"+modelos.get(0).getImage_name()));
 					info.setText(
-							"El SEAT Alhambra es el buque insignia \nde la gama SEAT por tamaño y \ncapacidad de transporte.");
+							modelos.get(0).getDescript()
+							);
 				}
 			});
 
@@ -96,9 +113,10 @@ public class Seleccion_Coche extends JFrame {
 			ImageSEAT2.addActionListener(new ActionListener() {
 				@Override
 				public void actionPerformed(ActionEvent e) {
-					ImagenSelect.setIcon(new ImageIcon("./imagenes/seat-arona.jpg"));
+					ImagenSelect.setIcon(new ImageIcon("./imagenes/"+modelos.get(1).getImage_name()));
 					info.setText(
-							"El SEAT Arona es el primer crossover \ndel segmento B de SEAT. Se trata de una \nversión crossover del SEAT Ibiza.");
+							modelos.get(1).getDescript()
+							);
 				}
 			});
 
@@ -107,9 +125,10 @@ public class Seleccion_Coche extends JFrame {
 			ImageSEAT3.addActionListener(new ActionListener() {
 				@Override
 				public void actionPerformed(ActionEvent e) {
-					ImagenSelect.setIcon(new ImageIcon("./imagenes/seat-ateca.jpg"));
+					ImagenSelect.setIcon(new ImageIcon("./imagenes/"+modelos.get(2).getImage_name()));
 					info.setText(
-							"El SEAT Ateca es el primer SUV de SEAT. \nEs un todocamino de tamaño mediano, \ncomparable al Audi Q3 o al Kia Sportage.");
+							modelos.get(2).getDescript()
+							);
 				}
 			});
 
@@ -118,9 +137,10 @@ public class Seleccion_Coche extends JFrame {
 			ImageSEAT4.addActionListener(new ActionListener() {
 				@Override
 				public void actionPerformed(ActionEvent e) {
-					ImagenSelect.setIcon(new ImageIcon("./imagenes/seat-ibiza.jpg"));
+					ImagenSelect.setIcon(new ImageIcon("./imagenes/"+modelos.get(3).getImage_name()));
 					info.setText(
-							"El SEAT Ibiza es el utilitario de SEAT, \nla opción del segmento B del fabricante \nespañol, un coche pequeño que es rival \ndel Reanult Clio, del Peugeot 208, del \nMazda2 o del Ford Fiesta.");
+							modelos.get(3).getDescript()
+							);
 				}
 			});
 
@@ -129,9 +149,10 @@ public class Seleccion_Coche extends JFrame {
 			ImageSEAT5.addActionListener(new ActionListener() {
 				@Override
 				public void actionPerformed(ActionEvent e) {
-					ImagenSelect.setIcon(new ImageIcon("./imagenes/seat-leon.jpg"));
+					ImagenSelect.setIcon(new ImageIcon("./imagenes/"+modelos.get(4).getImage_name()));
 					info.setText(
-							"El SEAT León es un compacto de precio \ncompetitivo disponible con carrocerías de \n5 puertas, 3 puertas y carrocería familiar.");
+							modelos.get(4).getDescript()
+							);
 				}
 			});
 
@@ -140,9 +161,10 @@ public class Seleccion_Coche extends JFrame {
 			ImageSEAT6.addActionListener(new ActionListener() {
 				@Override
 				public void actionPerformed(ActionEvent e) {
-					ImagenSelect.setIcon(new ImageIcon("./imagenes/seat-panda.jpg"));
+					ImagenSelect.setIcon(new ImageIcon("./imagenes/"+modelos.get(5).getImage_name()));
 					info.setText(
-							"El SEAT Panda es un automóvil utilitario \n(segmento A) diseñado por Giorgetto \nGiugiaro y producido por esta firma bajo \nlicencia de Fiat.");
+							modelos.get(5).getDescript()
+							);
 				}
 			});
 
@@ -151,9 +173,10 @@ public class Seleccion_Coche extends JFrame {
 			ImageSEAT7.addActionListener(new ActionListener() {
 				@Override
 				public void actionPerformed(ActionEvent e) {
-					ImagenSelect.setIcon(new ImageIcon("./imagenes/seat-tarraco.jpg"));
+					ImagenSelect.setIcon(new ImageIcon("./imagenes/"+modelos.get(6).getImage_name()));
 					info.setText(
-							"El SEAT Tarraco es un todocamino \ngrande de hasta 7 plazas fabricado por \nSEAT, que se sitúa un escalón por \nencima del SEAT Ateca.");
+							modelos.get(6).getDescript()
+							);
 				}
 			});
 

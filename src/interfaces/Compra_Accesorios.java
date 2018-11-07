@@ -10,6 +10,9 @@ import javax.swing.GroupLayout;
 import javax.swing.GroupLayout.Alignment;
 import javax.swing.JLabel;
 import java.awt.Font;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
 import javax.swing.JTextArea;
 import javax.swing.JCheckBox;
 import javax.swing.LayoutStyle.ComponentPlacement;
@@ -22,18 +25,18 @@ public class Compra_Accesorios extends JFrame {
 	/**
 	 * Launch the application.
 	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					Compra_Accesorios frame = new Compra_Accesorios();
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
+//	public static void main(String[] args) {
+//		EventQueue.invokeLater(new Runnable() {
+//			public void run() {
+//				try {
+//					Compra_Accesorios frame = new Compra_Accesorios();
+//					frame.setVisible(true);
+//				} catch (Exception e) {
+//					e.printStackTrace();
+//				}
+//			}
+//		});
+//	}
 
 	/**
 	 * Create the frame.
@@ -44,7 +47,7 @@ public class Compra_Accesorios extends JFrame {
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
-		
+		setLocationRelativeTo(null);
 		JLabel CompraAccesorio = new JLabel("Compra de Accesorios");
 		CompraAccesorio.setFont(new Font("Tahoma", Font.PLAIN, 17));
 		
@@ -74,6 +77,16 @@ public class Compra_Accesorios extends JFrame {
 		ArgPrecio.setText("0");
 		
 		JButton btnAtras = new JButton("Atras");
+		btnAtras.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				Seleccion_Coche sc = new Seleccion_Coche();
+				sc.setVisible(true);
+				dispose();
+				
+			}
+		});
 		
 		JButton btnFinalizar = new JButton("Finalizar");
 		GroupLayout gl_contentPane = new GroupLayout(contentPane);
