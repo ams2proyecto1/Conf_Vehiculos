@@ -64,17 +64,19 @@
 		<engine>
 			<id>1001</id>
 			<name>MotorDiesel</name>
-			<descript> los motores diésel son principalmente empleados en medios de transporte que requieren una dosis extra de potencia y que están pensados para una mayor carga diaria de trabajo</descript>
+			<descript>Diesel con 4 Velocidades y manejo Manual</descript>
 			<image_name>motor_diesel</image_name>
-			<price>1100</price>			
+			<price>1100</price>
+			<models_avaliable>0001,0003,0004,0005</models_avaliable>
 		</engine>
 
 		<engine>
 			<id>1002</id>
 			<name>MotorElectrico</name>
-			<descript>motor eléctrico puro, capaz de transformar la energía eléctrica en energía mecánica por medio de los campos magnéticos que genera, sin necesidad de explosiones ni combustiones propias de los motores gasolina y diésel</descript>
+			<descript>Electrico con 5 velocidades y manejo Manual</descript>
 			<image_name>motor_electrico</image_name>
-			<price>2400</price>			
+			<price>2400</price>
+			<models_avaliable>0002,0006,0007</models_avaliable>
 		</engine>
 	</engines>
 
@@ -85,13 +87,7 @@
 			<descript>Autorradio JVC para coche con tecnología Bluetooth, también incluye función de reconocimiento por voz</descript>
 			<image_name>autoradio.png</image_name>
 			<price>99</price>	
-			<model_available>
-				<model_id>0001</model_id>
-				<model_id>0003</model_id>
-				<model_id>0004</model_id>
-				<model_id>0005</model_id>
-				<model_id>0007</model_id>
-			</model_available>
+			<model_available>0001,0003,0004,00005,00007</model_available>
 		</accesory>
 
 		<accesory>
@@ -100,12 +96,7 @@
 			<descript>Bluetooth manos Libres, Puerto USB, Potencia de 4x40W</descript>
 			<image_name>sistema_multimedia.png</image_name>
 			<price>139</price>	
-			<model_available>
-				<model_id>0001</model_id>
-				<model_id>0002</model_id>
-				<model_id>0005</model_id>
-				<model_id>0006</model_id>
-			</model_available>
+			<model_available>0001,0002,0005,0006</model_available>
 		</accesory>
 
 		<accesory>
@@ -114,13 +105,7 @@
 			<descript>Excelente calidad de sonido, Integrado en el sistema de audio del vehículo</descript>
 			<image_name>kit_manos_libres.png</image_name>
 			<price>149</price>	
-			<model_available>
-				<model_id>0003</model_id>
-				<model_id>0004</model_id>
-				<model_id>0005</model_id>
-				<model_id>0006</model_id>
-				<model_id>0007</model_id>
-			</model_available>
+			<model_available>0003,0004,0005,0006,0007</model_available>
 		</accesory>
 
 		<accesory>
@@ -129,13 +114,7 @@
 			<descript>Altavoces para coche coaxiales 6x9, 350W de potencia pico y 90W de potencia RMS</descript>
 			<image_name>altavoces.png</image_name>
 			<price>75</price>	
-			<model_available>
-				<model_id>0001</model_id>
-				<model_id>0002</model_id>
-				<model_id>0003</model_id>
-				<model_id>0004</model_id>
-				<model_id>0007</model_id>
-			</model_available>
+			<model_available>0001,0002,0003,0004,0007</model_available>
 		</accesory>
 
 		<accesory>
@@ -144,15 +123,7 @@
 			<descript>Tapacubos 13" en plata, modelo 420 PLATA SPARK</descript>
 			<image_name>tapacubos.png</image_name>
 			<price>17</price>	
-			<model_available>
-				<model_id>0001</model_id>
-				<model_id>0002</model_id>
-				<model_id>0003</model_id>
-				<model_id>0004</model_id>
-				<model_id>0005</model_id>
-				<model_id>0006</model_id>
-				<model_id>0007</model_id>
-			</model_available>
+			<model_available>0001,0002,0003,0004,0005,0006,0007</model_available>
 		</accesory>
 
 		<accesory>
@@ -161,237 +132,7 @@
 			<descript>Cadenas de nieve metálicas para tus neumáticos con sistema de tensión autoblocante y muelle lateral</descript>
 			<image_name>cadenas_de_nieve.png</image_name>
 			<price>54</price>	
-			<model_available>
-				<model_id>0001</model_id>
-				<model_id>0002</model_id>
-				<model_id>0003</model_id>
-				<model_id>0004</model_id>
-				<model_id>0005</model_id>
-				<model_id>0006</model_id>
-				<model_id>0007</model_id>
-			</model_available>
+			<model_available>0001,0002,0003,0004,0005,0006,0007</model_available>
 		</accesory>
 	</accesories>
-
-	
-	<submodel>
-		<id>0001</id>
-		<sid>0001</sid>
-		<name>SEAT Alhambra 1.4</name>
-		<caballos>150CV</caballos>
-		<doors>5 puertas</doors>
-		<motor>MotorDiesel</motor>
-		<price>25484</price>
-		<lista_accesorios>
-			<accesory>2001</accesory>
-			<accesory>2004</accesory>
-			<accesory>2005</accesory>
-		</lista_accesorios>
-	</submodel>
-	
-	<submodel>
-		<id>0001</id>
-		<sid>0002</sid>
-		<name>SEAT Alhambra 2.0</name>
-		<caballos>160CV</caballos>
-		<doors>5 puertas</doors>
-		<motor>MotorElectrico</motor>
-		<price>26484</price>
-		<lista_accesorios>
-			<accesory>2001</accesory>
-			<accesory>2002</accesory>
-			<accesory>2005</accesory>
-			<accesory>2006</accesory>
-		</lista_accesorios>
-	</submodel>
-	
-	<submodel>
-		<id>0002</id>
-		<sid>0003</sid>
-		<name>SEAT Arena 1.1</name>
-		<caballos>140CV</caballos>
-		<doors>5 puertas</doors>
-		<motor>MotorDiesel</motor>
-		<price>23784</price>
-		<lista_accesorios>
-			<accesory>2002</accesory>
-			<accesory>2004</accesory>
-			<accesory>2006</accesory>
-		</lista_accesorios>
-	</submodel>
-	
-	<submodel>
-		<id>0002</id>
-		<sid>0004</sid>
-		<name>SEAT Arena 1.9</name>
-		<caballos>170CV</caballos>
-		<doors>5 puertas</doors>
-		<motor>MotorDiesel</motor>		
-		<price>25456</price>
-		<lista_accesorios>
-			<accesory>2002</accesory>
-			<accesory>2004</accesory>
-			<accesory>2005</accesory>
-			<accesory>2006</accesory>
-		</lista_accesorios>
-	</submodel>
-	
-	<submodel>
-		<id>0003</id>
-		<sid>0005</sid>
-		<name>SEAT Ateca 2.0</name>
-		<caballos>170CV</caballos>
-		<doors>5 puertas</doors>
-		<motor>MotorElectrico</motor>
-		<price>28357</price>
-		<lista_accesorios>
-			<accesory>2001</accesory>
-			<accesory>2005</accesory>
-			<accesory>2006</accesory>
-		</lista_accesorios>
-	</submodel>
-	
-	<submodel>
-		<id>0003</id>
-		<sid>0006</sid>
-		<name>SEAT Ateca 3.0</name>
-		<caballos>190CV</caballos>
-		<doors>5 puertas</doors>
-		<motor>MotorElectrico</motor>
-		<price>30784</price>
-		<lista_accesorios>
-			<accesory>2001</accesory>
-			<accesory>2003</accesory>
-			<accesory>2004</accesory>
-			<accesory>2005</accesory>
-			<accesory>2006</accesory>
-		</lista_accesorios>
-	</submodel>
-	
-	<submodel>
-		<id>0004</id>
-		<sid>0007</sid>
-		<name>SEAT Ibiza 4.0</name>
-		<caballos>160CV</caballos>
-		<doors>5 puertas</doors>
-		<motor>MotorElectrico</motor>
-		<price>20484</price>
-		<lista_accesorios>
-			<accesory>2001</accesory>
-			<accesory>2005</accesory>
-			<accesory>2006</accesory>
-		</lista_accesorios>
-	</submodel>
-	
-	<submodel>
-		<id>0004</id>
-		<sid>0008</sid>
-		<name>SEAT Ibiza 5.0</name>
-		<caballos>140CV</caballos>
-		<doors>5 puertas</doors>
-		<motor>MotorDiesel</motor>
-		<price>24894</price>
-		<lista_accesorios>
-			<accesory>2001</accesory>
-			<accesory>2003</accesory>
-			<accesory>2004</accesory>
-			<accesory>2005</accesory>
-			<accesory>2006</accesory>
-		</lista_accesorios>
-	</submodel>
-	
-	<submodel>
-		<id>0005</id>
-		<sid>0009</sid>
-		<name>SEAT Leon 5.1</name>
-		<caballos>140CV</caballos>
-		<doors>5 puertas</doors>
-		<motor>MotorDiesel</motor>
-		<price>15084</price>
-		<lista_accesorios>
-			<accesory>2005</accesory>
-			<accesory>2006</accesory>
-		</lista_accesorios>
-	</submodel>
-	
-	<submodel>
-		<id>0005</id>
-		<sid>0010</sid>
-		<name>SEAT Leon 6.1</name>
-		<caballos>180CV</caballos>
-		<doors>5 puertas</doors>
-		<motor>MotorElectrico</motor>
-		<price>30484</price>
-		<lista_accesorios>
-			<accesory>2001</accesory>
-			<accesory>2002</accesory>
-			<accesory>2003</accesory>
-			<accesory>2005</accesory>
-			<accesory>2006</accesory>
-		</lista_accesorios>
-	</submodel>
-	
-	<submodel>
-		<id>0006</id>
-		<sid>0011</sid>
-		<name>SEAT Panda 0.5</name>
-		<caballos>90CV</caballos>
-		<doors>3 puertas</doors>
-		<motor>MotorDiesel</motor>
-		<price>1484</price>
-		<lista_accesorios>
-			<accesory>2002</accesory>
-			<accesory>2005</accesory>
-			<accesory>2006</accesory>
-		</lista_accesorios>
-	</submodel>
-	
-	<submodel>
-		<id>0006</id>
-		<sid>0012</sid>
-		<name>SEAT Panda 0.9</name>
-		<caballos>100CV</caballos>
-		<doors>3 puertas</doors>
-		<motor>MotorDiesel</motor>
-		<price>3248</price>
-		<lista_accesorios>
-			<accesory>2002</accesory>
-			<accesory>2003</accesory>
-			<accesory>2005</accesory>
-			<accesory>2006</accesory>
-		</lista_accesorios>
-	</submodel>
-	
-	<submodel>
-		<id>0007</id>
-		<sid>0013</sid>
-		<name>SEAT Tarraco 2.1</name>
-		<caballos>170CV</caballos>
-		<doors>5 puertas</doors>
-		<motor>MotorDiesel</motor>
-		<price>15484</price>
-		<lista_accesorios>
-			<accesory>2001</accesory>
-			<accesory>2005</accesory>
-			<accesory>2006</accesory>
-		</lista_accesorios>
-	</submodel>
-	
-	<submodel>
-		<id>0007</id>
-		<sid>0014</sid>
-		<name>SEAT Tarraco 3.5</name>
-		<caballos>180CV</caballos>
-		<doors>5 puertas</doors>
-		<motor>MotorDiesel</motor>
-		<price>16484</price>
-		<lista_accesorios>
-			<accesory>2001</accesory>
-			<accesory>2003</accesory>
-			<accesory>2004</accesory>
-			<accesory>2005</accesory>
-			<accesory>2006</accesory>
-		</lista_accesorios>
-	</submodel>
-	
 </xml_cars_config>

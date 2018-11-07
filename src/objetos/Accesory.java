@@ -9,12 +9,12 @@ public class Accesory {
 	private String descript;
 	private String image_name;
 	private String price;
-	private String[] model_available;
+	private String model_available;
 	
 	
 	// Constructor de objeto Modelo
 	public Accesory(String id, String name, String descript, String image_name, String a_price,
-			String[] model_available) {
+			String model_available) {
 		super();
 		this.id = id;
 		this.name = name;

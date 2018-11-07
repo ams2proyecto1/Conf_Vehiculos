@@ -7,15 +7,17 @@ public class Engine {
 	private String descript;
 	private String image_name;
 	private String price;
+	private String modelsAvailable;
 	
 	//Constructor de objeto Modelo
-	public Engine(String id, String name, String descript, String image_name, String e_price) {
+	public Engine(String id, String name, String descript, String image_name, String e_price, String modelsAvailable) {
 		super();
 		this.id = id;
 		this.name = name;
 		this.descript = descript;
 		this.image_name = image_name;
 		this.price = e_price;
+		this.modelsAvailable = modelsAvailable;
 	}
 	
 	//Setters y getters de los atributos
@@ -57,8 +59,15 @@ public class Engine {
 
 	public void setPrice(String price) {
 		this.price = price;
+	}	
+
+	public String getModelsAvailable() {
+		return modelsAvailable;
 	}
 
+	public void setModelsAvailable(String modelsAvailable) {
+		this.modelsAvailable = modelsAvailable;
+	}
 
 	@Override
 	public String toString() {
