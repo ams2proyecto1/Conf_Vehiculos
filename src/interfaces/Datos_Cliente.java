@@ -55,6 +55,7 @@ public class Datos_Cliente {
 
 	public Datos_Cliente() {
 		initialize();
+		
 	}
 
 	/**
@@ -265,7 +266,7 @@ public class Datos_Cliente {
 														Short.MAX_VALUE))
 										.addGap(36)));
 		frame.getContentPane().setLayout(groupLayout);
-		File f = new File("./temp/ficheros/datosCliente.txt");
+		File f = new File("./ficheros/temp/datosCliente.txt");
 		if (f.exists()) {
 			try {
 				String cadena;
@@ -307,7 +308,7 @@ public class Datos_Cliente {
 
 	public void guardarDatos() {
 		try {
-			FileWriter fw = new FileWriter(new File("./ficheros/datosCliente.txt"));
+			FileWriter fw = new FileWriter(new File("./ficheros/temp/datosCliente.txt"));
 			Cliente c1 = new Cliente(txtNombre.getText(), txtPrimerApellido.getText(), txtSegundoApellido.getText(),
 					txtDireccion.getText(), txtCorreo.getText(), genero(rbHombre, rbMujer, rbNoDeterminado),
 					dcFechaNacimiento.getDate());

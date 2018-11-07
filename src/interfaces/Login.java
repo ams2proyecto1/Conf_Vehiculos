@@ -32,16 +32,23 @@ public class Login {
 	public Login() {
 		initialize();
 	}
+	
 
 	/**
 	 * Initialize the contents of the frame.
 	 */
 	private void initialize() {
-		File f = new File("./ficheros/datosCliente.txt");
-		if(f.exists()) {
+		File f = new File("./ficheros/temp/datosCliente.txt");
+		File coches = new File("./ficheros/temp/cocheSelected.txt");
+		System.out.println(coches.exists());
+		System.out.println(coches.delete());
+		if (f.exists()) {
 			f.delete();
-		}	
-		
+		}
+		if (coches.exists()) {
+			f.delete();
+		}
+
 		frame = new JFrame();
 		frame.setBounds(100, 100, 347, 227);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
