@@ -79,8 +79,10 @@ public class Seleccion_Coche extends JFrame {
 		btnSiguiente.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				Compra_Accesorios ca = new Compra_Accesorios();
-				ca.setVisible(true);
+//				Compra_Accesorios ca = new Compra_Accesorios();
+//				ca.setVisible(true);
+				Seleccion_Submodelo ss = new Seleccion_Submodelo();
+				ss.getFrame().setVisible(true);
 				dispose();
 
 			}
