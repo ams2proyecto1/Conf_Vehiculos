@@ -8,6 +8,8 @@ import javax.swing.GroupLayout;
 import javax.swing.GroupLayout.Alignment;
 import javax.swing.JLabel;
 import java.awt.Font;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
@@ -77,9 +79,29 @@ public class Seleccion_Submodelo {
 		}
 
 		btnAnterior = new JButton("Anterior");
+		btnAnterior.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				Seleccion_Coche sc = new Seleccion_Coche();
+				sc.setVisible(true);
+				frame.dispose();
+				
+			}
+		});
 		btnAnterior.setFont(new Font("Tahoma", Font.PLAIN, 14));
 
 		btnSiguiente = new JButton("Siguiente");
+		btnSiguiente.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				Compra_Accesorios ca = new Compra_Accesorios();
+				ca.setVisible(true);
+				frame.dispose();
+				
+			}
+		});
 		btnSiguiente.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		GroupLayout groupLayout = new GroupLayout(frame.getContentPane());
 		groupLayout.setHorizontalGroup(groupLayout.createParallelGroup(Alignment.LEADING)

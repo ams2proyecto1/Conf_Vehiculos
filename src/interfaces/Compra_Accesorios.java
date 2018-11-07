@@ -81,8 +81,8 @@ public class Compra_Accesorios extends JFrame {
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				Seleccion_Coche sc = new Seleccion_Coche();
-				sc.setVisible(true);
+				Seleccion_Submodelo sb = new Seleccion_Submodelo();
+				sb.getFrame().setVisible(true);
 				dispose();
 				
 			}
