@@ -6,12 +6,19 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+
+import manageXML.Leer_XML_Cars;
+import objetos.Accesory;
+import objetos.Engine;
+import objetos.Model;
+
 import javax.swing.GroupLayout;
 import javax.swing.GroupLayout.Alignment;
 import javax.swing.JLabel;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 
 import javax.swing.JTextArea;
 import javax.swing.JCheckBox;
@@ -21,6 +28,12 @@ import javax.swing.JButton;
 public class Compra_Accesorios extends JFrame {
 
 	private JPanel contentPane;
+	JCheckBox acc1;
+	JCheckBox acc2;
+	JCheckBox acc3;
+	JCheckBox acc4;
+	JCheckBox acc5;
+	JCheckBox acc6;
 
 	/**
 	 * Launch the application.
@@ -54,21 +67,17 @@ public class Compra_Accesorios extends JFrame {
 		JLabel DatosCoche = new JLabel("Informaci\u00F3n del coche");
 		DatosCoche.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		
-		JCheckBox acc1 = new JCheckBox("New check box");
+		acc1 = new JCheckBox("AutoRadio");
 		
-		JCheckBox acc2 = new JCheckBox("New check box");
+		acc2 = new JCheckBox("SistemaMultimedia");
 		
-		JCheckBox acc3 = new JCheckBox("New check box");
+		acc3 = new JCheckBox("KitManosLibres");
 		
-		JCheckBox acc4 = new JCheckBox("New check box");
+		acc4 = new JCheckBox("Altavoces");
 		
-		JCheckBox acc5 = new JCheckBox("New check box");
+		acc5 = new JCheckBox("Tapacubos");
 		
-		JCheckBox acc6 = new JCheckBox("New check box");
-		
-		JCheckBox acc7 = new JCheckBox("New check box");
-		
-		JCheckBox acc8 = new JCheckBox("New check box");
+		acc6 = new JCheckBox("CadenasDeNieve");
 		
 		JLabel textArg = new JLabel("Argumento en el precio:");
 		textArg.setFont(new Font("Tahoma", Font.PLAIN, 14));
@@ -99,26 +108,29 @@ public class Compra_Accesorios extends JFrame {
 				.addGroup(gl_contentPane.createSequentialGroup()
 					.addGap(39)
 					.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
-						.addComponent(acc4)
-						.addComponent(acc3)
-						.addComponent(acc2)
-						.addComponent(acc1)
 						.addComponent(textArg)
-						.addComponent(btnAtras))
-					.addPreferredGap(ComponentPlacement.RELATED, 54, Short.MAX_VALUE)
-					.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
-						.addComponent(btnFinalizar)
-						.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
-							.addComponent(CompraAccesorio, Alignment.TRAILING)
-							.addGroup(Alignment.TRAILING, gl_contentPane.createSequentialGroup()
-								.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING, false)
-									.addComponent(acc5, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-									.addComponent(acc6, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-									.addComponent(acc7, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-									.addComponent(acc8, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-									.addComponent(ArgPrecio))
-								.addGap(101))))
+						.addGroup(gl_contentPane.createSequentialGroup()
+							.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
+								.addComponent(acc3)
+								.addComponent(acc2)
+								.addComponent(acc1))
+							.addPreferredGap(ComponentPlacement.RELATED, 78, Short.MAX_VALUE)
+							.addGroup(gl_contentPane.createParallelGroup(Alignment.TRAILING)
+								.addComponent(CompraAccesorio)
+								.addGroup(gl_contentPane.createSequentialGroup()
+									.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING, false)
+										.addComponent(acc5, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+										.addComponent(acc6, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+										.addComponent(acc4)
+										.addComponent(ArgPrecio, GroupLayout.PREFERRED_SIZE, 177, GroupLayout.PREFERRED_SIZE))
+									.addGap(31)))))
 					.addContainerGap())
+				.addGroup(gl_contentPane.createSequentialGroup()
+					.addGap(55)
+					.addComponent(btnAtras)
+					.addPreferredGap(ComponentPlacement.RELATED, 160, Short.MAX_VALUE)
+					.addComponent(btnFinalizar)
+					.addGap(103))
 		);
 		gl_contentPane.setVerticalGroup(
 			gl_contentPane.createParallelGroup(Alignment.LEADING)
@@ -134,27 +146,29 @@ public class Compra_Accesorios extends JFrame {
 							.addGap(18)
 							.addComponent(acc6)
 							.addGap(18)
-							.addComponent(acc7)
-							.addGap(18)
-							.addComponent(acc8))
+							.addComponent(acc4))
 						.addGroup(gl_contentPane.createSequentialGroup()
 							.addComponent(acc1)
 							.addGap(18)
 							.addComponent(acc2)
 							.addGap(18)
-							.addComponent(acc3)
-							.addGap(18)
-							.addComponent(acc4)))
-					.addGap(29)
+							.addComponent(acc3)))
+					.addGap(58)
 					.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
 						.addComponent(textArg)
 						.addComponent(ArgPrecio, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
-					.addGap(33)
+					.addGap(42)
 					.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
 						.addComponent(btnAtras)
 						.addComponent(btnFinalizar))
-					.addContainerGap(40, Short.MAX_VALUE))
+					.addContainerGap(49, Short.MAX_VALUE))
 		);
 		contentPane.setLayout(gl_contentPane);
+	}
+	
+	public static void Metodo() {
+		Leer_XML_Cars coches = new Leer_XML_Cars();
+		ArrayList<Accesory> accesorios = coches.getAccesoryAll();
+		
 	}
 }

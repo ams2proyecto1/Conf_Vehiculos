@@ -57,7 +57,7 @@ public class Seleccion_Coche extends JFrame {
 	public Seleccion_Coche() {
 
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 583, 572);
+		setBounds(100, 100, 650, 572);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setLocationRelativeTo(null);
@@ -65,7 +65,7 @@ public class Seleccion_Coche extends JFrame {
 
 		JLabel titulo = new JLabel("SELECCIONA EL MODELO DEL COCHE");
 		titulo.setFont(new Font("Tahoma", Font.PLAIN, 16));
-
+		
 		ImagenSelect = new JLabel();
 		// ImagenSelect.setIcon(new ImageIcon("./imagenes/seat-alhambra.jpg"));
 		info = new JTextArea();
@@ -102,7 +102,8 @@ public class Seleccion_Coche extends JFrame {
 		modelos = cars.getModelAll();
 		cargarDefecto();
 
-		usuario = new JLabel("Usuario: ");
+		usuario = new JLabel("Usuario:  Carlos");
+		usuario.setFont(new Font("Tahoma", Font.PLAIN, 14));
 
 		JButton ImageSEAT1 = new JButton("");
 		ImageSEAT1.setIcon(new ImageIcon("./imagenes/seat-alhambra-min.jpg"));
