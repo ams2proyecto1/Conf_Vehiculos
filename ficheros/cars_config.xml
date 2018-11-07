@@ -67,7 +67,7 @@
 			<descript>Diesel con 4 Velocidades y manejo Manual</descript>
 			<image_name>motor_diesel</image_name>
 			<price>1100</price>
-			<models_avaliable>0001,0003,0004,0005</models_avaliable>
+			<models_avaliable>0001,0003,0004,0005,0007</models_avaliable>
 		</engine>
 
 		<engine>
@@ -76,7 +76,7 @@
 			<descript>Electrico con 5 velocidades y manejo Manual</descript>
 			<image_name>motor_electrico</image_name>
 			<price>2400</price>
-			<models_avaliable>0002,0006,0007</models_avaliable>
+			<models_avaliable>0001,0002,0005,0006,0007</models_avaliable>
 		</engine>
 	</engines>
 
