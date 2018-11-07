@@ -12,7 +12,6 @@ public class Accesory {
 	private String model_available;
 	
 	
-	// Constructor de objeto Modelo
 	public Accesory(String id, String name, String descript, String image_name, String a_price,
 			String model_available) {
 		super();
@@ -24,7 +23,6 @@ public class Accesory {
 		this.model_available = model_available;
 	}
 
-	// Setters y getters de los atributos
 	public String getId() {
 		return id;
 	}
@@ -65,18 +63,19 @@ public class Accesory {
 		this.price = price;
 	}
 
-	public String[] getModel_available() {
+	public String getModel_available() {
 		return model_available;
 	}
 
-	public void setModel_available(String[] model_available) {
+	public void setModel_available(String model_available) {
 		this.model_available = model_available;
 	}
 
-	@Override
 	public String toString() {
 		return "Accesory [id=" + id + ", name=" + name + ", descript=" + descript + ", image_name=" + image_name
-				+ ", price=" + price + ", model_available=" + Arrays.toString(model_available) + "]";
+				+ ", price=" + price + ", model_available=" + model_available + "]";
 	}
+
+	
 
 }

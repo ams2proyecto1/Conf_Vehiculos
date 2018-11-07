@@ -69,7 +69,6 @@ public class Engine {
 		this.modelsAvailable = modelsAvailable;
 	}
 
-	@Override
 	public String toString() {
 		return "Engine [id=" + id + ", name=" + name + ", descript=" + descript + ", image_name=" + image_name
 				+ ", price=" + price + "]";

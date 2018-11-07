@@ -106,13 +106,10 @@ public class Leer_XML_Cars  implements ICoches{
 
 					org.w3c.dom.Node nNode3 =nList3.item(k);
 							
-					
-							
 					if (nNode3.getNodeType() == Node.ELEMENT_NODE) {
 
 						Node eElement3 = nNode3;
 
-						
 						a_id = ((Element) eElement3).getElementsByTagName("id").item(0).getTextContent();
 						a_name=  ((Element) eElement3).getElementsByTagName("name").item(0).getTextContent();
 						a_descript = ((Element) eElement3).getElementsByTagName("descript").item(0).getTextContent();

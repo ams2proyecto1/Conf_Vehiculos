@@ -20,7 +20,7 @@
 		<model>
 			<id>0003</id>
 			<name>SEATateca</name>
-			<descript>El SEAT Ateca es el primer SUV de SEAT. Es un todocamino de tamaño mediano, comparable al Audi Q3 o al Kia Sportage</descript>
+			<descript>El SEAT Ateca es el primer SUV de SEAT. Es un todocamino de tamaño mediano, comparable al Audi Q3 o al Kia Sport</descript>
 			<image_name>seat-ateca.jpg</image_name>
 			<price>17900</price>
 		</model>
